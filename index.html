@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input class="form-control" id="generateNumber" placeholder="Type Code" type="text">
+                    <button class="generate-btn" id="generateBtn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input class="form-control" id="typeVerifyCode" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                              <div id="count1" class="button">7</div>
+                              <div id="count2" class="button">8</div>
+                              <div id="count3" class="button">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div id="count4" class="button">4</div>
+                              <div id="count5" class="button">5</div>
+                              <div id="count6" class="button">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div id="count7" class="button">1</div>
+                              <div id="count8" class="button">2</div>
+                              <div id="count9" class="button">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div id="count10" class="button">&lt;</div>
+                              <div id="count11" class="button">0</div>
+                              <div id="count12" class="button">C</div>
+                            </div>
+                            <div>
+                                <button type="submit" id="submit-btn" class="submit-btn">Submit</button>
+                                <p class="action-left" ><span>3 try left</span></p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p class="notify" id="wrong-pin">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify" id="correct-pin">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
