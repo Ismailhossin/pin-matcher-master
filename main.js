@@ -1,9 +1,16 @@
-let generateClick = document.getElementById('generateBtn');
-    generateClick.addEventListener('click', function () {
-    let randomNum = Math.round(Math.random() * 5245);
-
-    document.getElementById('generateNumber').value = randomNum;
+let generateClick = document.getElementById('generateBtn').addEventListener('click', function () {
+    let roundAndRandom = Math.round(Math.random() * 9999);
+    if (roundAndRandom > 1001) {
+        document.getElementById('generateNumber').value = roundAndRandom;
+        document.getElementById('generateNumber').style.color = 'white';
+        document.getElementById('generateNumber').style.transition = '1s'; 
+    }
+    else{
+        document.getElementById('generateNumber').value = 2547;
+        document.getElementById('generateNumber').style.color = 'red';
+    }    
 });
+
 
 //arman
 
@@ -87,3 +94,6 @@ function clear() {
     document.getElementById('typeVerifyCode').value = "";
     document.getElementById('generateNumber').value = "";
 }
+
+
+
